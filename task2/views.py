@@ -1,12 +1,10 @@
-# task2/views.py
+from django.views.generic import TemplateView
 from django.shortcuts import render
-from django.views import View
 
 
-class ClassBasedView(View):
-    def get(self, request):
-        return render(request, '../templates/second_task/class_based.html', {'message': 'Это шаблон для классового представления'})
+class ClassView(TemplateView):
+    template_name = 'second_task/class_view_template.html'
 
 
-def function_based_view(request):
-    return render(request, '../templates/second_task/function_based.html', {'message': 'Это шаблон для функционального представления'})
+def function_view(request):
+    return render(request, 'second_task/function_view_template.html')

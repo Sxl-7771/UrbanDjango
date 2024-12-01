@@ -1,8 +1,7 @@
-# task2/urls.py
 from django.urls import path
-from .views import ClassBasedView, function_based_view
+from .views import ClassView, function_view
 
 urlpatterns = [
-    path('class/', ClassBasedView.as_view(), name='class_based'),
-    path('function/', function_based_view, name='function_based'),
+    path('class-view/', ClassView.as_view(), name='class_view'),
+    path('function-view/', function_view, name='function_view'),
 ]
