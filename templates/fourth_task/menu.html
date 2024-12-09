@@ -1,0 +1,22 @@
+<!-- templates/fourth_task/menu.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>{% block pagename %}Главная страница{% endblock %}</h1>
+    <nav>
+        <ul>
+            <li><a href="/platform/">Главная</a></li>
+            <li><a href="/platform/shop/">Магазин</a></li>
+            <li><a href="/platform/cart/">Корзина</a></li>
+        </ul>
+    </nav>
+    <div>
+        {% block content %}
+        <!-- Контент страницы будет здесь -->
+        {% endblock %}
+    </div>
+</body>
+</html>
